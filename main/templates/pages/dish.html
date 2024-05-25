@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <body>
+        <header>
+            <section class="header-menu">
+                <div class="menu-first">
+                    <a href="{%url 'plan_of_day' %}">План<img src="{% static 'img/icons/clipboard.png' %}" alt="План"></a>
+                    <a href="{%url 'dish_list' %}">Блюда<img src="{% static 'img/icons/dish.png' %}" alt="Блюда"></a>
+                </div>
+                <div class="menu-second">
+                    <a href="{%url 'profile' %}"><img src="{% static 'img/icons/user.png' %}" alt="Изображение профиля">Профиль</a>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="food-section">
+                <div>
+                    <h2>Основное</h2>
+                    <div class="cart-box box">
+                        <a href="/filtered_dish/1">
+                            <img src="{% static 'img/food/english-breakfast.png' %}" alt="">
+                            <h3>Завтраки</h3>
+                        </a>
+                        <a href="/filtered_dish/2">
+                            <img src="{% static 'img/food/lunch-time.png' %}" alt="">
+                            <h3>Обеды</h3>
+                        </a>
+                        <a href="/filtered_dish/3">
+                            <img src="{% static 'img/food/christmas-dinner.png' %}" alt="">
+                            <h3>Ужины</h3>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h2>По калориям</h2>
+                    <div class="cart-box box calories-box">
+                        <a href="/filtered_dish/4">
+                            <img src="{% static 'img/icons/calories.png' %}" alt="">
+                            <h3>50-100</h3>
+                        </a>
+                        <a href="/filtered_dish/5">
+                            <img src="{% static 'img/icons/calories.png' %}" alt="">
+                            <h3>100-200</h3>
+                        </a>
+                        <a href="/filtered_dish/6">
+                            <img src="{% static 'img/icons/calories.png' %}" alt="">
+                            <h3>200-300</h3>
+                        </a>
+                        <a href="/filtered_dish/7">
+                            <img src="{% static 'img/icons/calories.png' %}" alt="">
+                            <h3>300-400</h3>
+                        </a>
+                        <a href="/filtered_dish/8">
+                            <img src="{% static 'img/icons/calories.png' %}" alt="">
+                            <h3>400-500</h3>
+                        </a>
+                        <a href="/filtered_dish/9">
+                            <img src="{% static 'img/icons/calories.png' %}" alt="">
+                            <h3>500-600</h3>
+                        </a>
+                        <a href="/filtered_dish/10">
+                            <img src="{% static 'img/icons/calories.png' %}" alt="">
+                            <h3>600-750</h3>
+                        </a>
+                        <a href="/filtered_dish/11">
+                            <img src="{% static 'img/icons/calories.png' %}" alt="">
+                            <h3>750-1000</h3>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h2>По витаминам</h2>
+                    <div class="cart-box box">
+                        <a href="/filtered_dish/12">
+                            <img src="{% static 'img/icons/vitamin-a.png' %}" alt="">
+                            <h3>Витамин A</h3>
+                        </a>
+                        <a href="/filtered_dish/13">
+                            <img src="{% static 'img/icons/vitamin-c.png' %}" alt="">
+                            <h3>Витамин B1</h3>
+                        </a>
+                        <a href="/filtered_dish/14">
+                            <img src="{% static 'img/icons/vitamin-d.png' %}" alt="">
+                            <h3>Витамин B2</h3>
+                        </a>
+                        <a href="/filtered_dish/15">
+                            <img src="{% static 'img/icons/vitamin-e.png' %}" alt="">
+                            <h3>Витамин B3</h3>
+                        </a>
+                        <a href="/filtered_dish/16">
+                            <img src="{% static 'img/icons/vitamin-e.png' %}" alt="">
+                            <h3>Витамин B5</h3>
+                        </a>
+                        <a href="/filtered_dish/17">
+                            <img src="{% static 'img/icons/vitamin-e.png' %}" alt="">
+                            <h3>Витамин B6</h3>
+                        </a>
+                        <a href="/filtered_dish/18">
+                            <img src="{% static 'img/icons/vitamin-e.png' %}" alt="">
+                            <h3>Витамин B7</h3>
+                        </a>
+                        <a href="/filtered_dish/19">
+                            <img src="{% static 'img/icons/vitamin-e.png' %}" alt="">
+                            <h3>Витамин B9</h3>
+                        </a>
+                        <a href="/filtered_dish/20">
+                            <img src="{% static 'img/icons/vitamin-e.png' %}" alt="">
+                            <h3>Витамин B12</h3>
+                        </a>
+                        <a href="/filtered_dish/21">
+                            <img src="{% static 'img/icons/vitamin-e.png' %}" alt="">
+                            <h3>Витамин C</h3>
+                        </a>
+                        <a href="/filtered_dish/22">
+                            <img src="{% static 'img/icons/vitamin-e.png' %}" alt="">
+                            <h3>Витамин D</h3>
+                        </a>
+                        <a href="/filtered_dish/23">
+                            <img src="{% static 'img/icons/vitamin-e.png' %}" alt="">
+                            <h3>Витамин E</h3>
+                        </a>
+                        <a href="/filtered_dish/24">
+                            <img src="{% static 'img/icons/vitamin-e.png' %}" alt="">
+                            <h3>Витамин K</h3>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+{% endblock %}

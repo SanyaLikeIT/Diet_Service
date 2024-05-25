@@ -1,0 +1,33 @@
+h2{
+    text-align: center;
+}
+.plan-section{
+    display: flex;
+    justify-content: space-between;
+    gap:1.5em;
+}
+.cart-plan{
+    background-color: #EDEDED;
+    padding: 1.25em;
+    border-radius:15px;
+    flex-grow: 1;
+}
+.cart-plan img{
+    width: 196px;
+}
+.cart-plan a{
+    text-align: center;
+    display: block;
+    width: 90%;
+}
+.ball-text-box{
+    display: flex;
+    align-items:center;
+    gap:0.5em;
+}
+.gray-circle{
+    width: 1.8em;
+    height: 1.8em;
+    background-color:#D9D9D9;
+    border-radius:50%;
+}

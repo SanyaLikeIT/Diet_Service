@@ -1,0 +1,12 @@
+.list-section a{
+    background-color: #EDEDED;
+    border-radius:15px;
+    padding: 2em;
+    display: flex;
+    gap:3em;
+    align-items:center;
+    margin-bottom: 2em;
+}
+.list-section img{
+    width: 7em;
+}

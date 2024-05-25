@@ -1,0 +1,80 @@
+.form-section{
+    width: 900px;
+    margin: 0 auto;
+}
+.form-section h1{
+    font-size: 48px;
+    text-align: center;
+}
+.form-box{
+
+    padding: 2em 2.5em;
+}
+.form-box p{
+    font-size: 27px;
+    margin: 10px 0;
+}
+.form-box a{
+    color: #8572FF;
+    text-decoration: underline;
+}
+.form-box input{
+    font-family: "Rubik", sans-serif;
+    font-size:27px;
+    border-radius:15px;
+    border: 1px solid #000;
+    padding: 0.5em;
+}
+.form-box textarea{
+    font-family: "Rubik", sans-serif;
+    font-size:17px;
+    border-radius:15px;
+    border: 1px solid #000;
+    padding: 0.5em;
+    resize: none;
+    width: 793px;
+    height: 23em;
+}
+.btn-form{
+    font-size:27px;
+    margin-top: 2em;
+    padding: 0.5em;
+    background-color: #23FF39;
+    border-radius: 15px;
+    width: 100%;
+}
+.name-input{
+    width: 793px;
+}
+.two-input-box{
+    display: flex;
+    justify-content:space-between;
+}
+.buttons-section{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    gap:1em;
+}
+.buttons-section img{
+    cursor: pointer;
+    position: absolute;
+    left:30%;
+    top:27%;
+    width: 32px;
+    
+}
+.buttons-section div{
+    cursor: pointer;
+    position: relative;
+    padding: 0.75em;
+    background-color:#D9D9D9;
+    border-radius:50%;
+    width: 3em;
+    height: 3em;
+}
+
+
+.img-input{
+    width: 793px;
+}

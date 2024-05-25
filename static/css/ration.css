@@ -1,0 +1,26 @@
+.ration-section{
+    background-color:#EDEDED;
+    border-radius:15px;
+    padding: 2em;
+
+}
+.food-box{
+    display: flex;
+    gap:2em;
+}
+h3{
+    font-size: 27px;
+    margin-top: 0;
+}
+h4{
+    font-size: 24px;
+    margin: 2px 0;
+}
+p{
+    font-size: 20px;
+}
+.ration-section img{
+    width:256px;
+    height: 256px;
+    border-radius:15px;
+}

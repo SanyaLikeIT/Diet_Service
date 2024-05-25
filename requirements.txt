@@ -1,0 +1,6 @@
+Django
+django-bootstrap5
+black
+pylint
+pylint-django
+pycodestyle

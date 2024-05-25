@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <body>
+        <header>
+            <section class="header-menu">
+                <div class="menu-first">
+                    <a href="{%url 'plan_of_day' %}">План<img src="{% static 'img/icons/clipboard.png' %}" alt="План"></a>
+                    <a href="{%url 'dish_list' %}">Блюда<img src="{% static 'img/icons/dish.png' %}" alt="Блюда"></a>
+                </div>
+                <div class="menu-second">
+                    <a href="{%url 'profile' %}"><img src="{% static 'img/icons/user.png' %}" alt="Изображение профиля">Профиль</a>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="plan-section">
+                <div class="cart-plan">
+                    <div style="display: flex; justify-content: center;"><img src="{% static 'img/food/english-breakfast.png' %}" alt="Завтрак"></div>
+                    <h2>Завтрак</h2>
+                    <div>
+                        <h3>Блюда:</h3>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>{{ breakfast_dishes1.Title}}</p>
+                        </section>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>{{ breakfast_dishes2.Title}}</p>
+                        </section>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>{{ breakfast_dishes3.Title}}</p>
+                        </section>
+                    </div>
+                    <div>
+                        <h3>О завтраке:</h3>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>Калории: {{ calories1 }}</p>
+                        </section>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>Приятного аппетита!</p>
+                        </section>
+                    </div>
+                    <a href="ration/1" class="btn-green">Подробнее</a>
+                </div>
+                <div class="cart-plan">
+                    <div style="display: flex; justify-content: center;"><img src="{% static 'img/food/lunch-time.png' %}" alt="Завтрак"></div>
+                    <h2>Обед</h2>
+                    <div>
+                        <h3>Блюда:</h3>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>{{ lunch_dishes1.Title}}</p>
+                        </section>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>{{ lunch_dishes2.Title}}</p>
+                        </section>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>{{ lunch_dishes3.Title}}</p>
+                        </section>
+                    </div>
+                    <div>
+                        <h3>Об обеде:</h3>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>Калории: {{ calories2 }}</p>
+                        </section>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>Приятного аппетита!</p>
+                        </section>
+                    </div>
+                    <a href="ration/2" class="btn-green">Подробнее</a>
+                </div>
+                <div class="cart-plan">
+                    <div style="display: flex; justify-content: center;"><img src="{% static 'img/food/christmas-dinner.png' %}" alt="Завтрак"></div>
+                    <h2>Ужин</h2>
+                    <div>
+                        <h3>Блюда:</h3>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>{{ dinner_dishes1.Title}}</p>
+                        </section>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>{{ dinner_dishes2.Title}}</p>
+                        </section>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>{{ dinner_dishes3.Title}}</p>
+                        </section>
+                    </div>
+                    <div>
+                        <h3>Об ужине:</h3>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>Калории: {{ calories3 }}</p>
+                        </section>
+                        <section class="ball-text-box">
+                            <div class="gray-circle"></div>
+                            <p>Приятного аппетита!</p>
+                        </section>
+                    </div>
+                    <a href="ration/3" class="btn-green">Подробнее</a>
+                </div>
+                
+            </section>
+        </main>
+    </body>
+{% endblock %}

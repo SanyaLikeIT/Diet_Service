@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <body>
+        <header>
+            <section class="header-menu">
+                <div class="menu-first">
+                    <a href="{%url 'plan_of_day' %}">План<img src="{% static 'img/icons/clipboard.png' %}" alt="План"></a>
+                    <a href="{%url 'dish' %}">Фильтры<img src="{% static 'img/icons/dish.png' %}" alt="Блюда"></a>
+                </div>
+                <div class="menu-second">
+                    <a href="{%url 'profile' %}"><img src="{% static 'img/icons/user.png' %}" alt="Изображение профиля">Профиль</a>
+                </div>
+            </section>
+        </header>
+        <main>
+
+            <section class="list-section">
+
+                {% for dish in AllDishes %}
+                <a href="/current_dish/{{dish.id}}">
+                    {% if dish.TypeOfDish ==  1%}
+                    <img src="{% static 'img/food/english-breakfast.png' %}" alt="Фото блюда">
+                    {% elif dish.TypeOfDish ==  2 %}
+                    <img src="{% static 'img/food/lunch-time.png' %}" alt="Фото блюда">
+                    {% else %}
+                    <img src="{% static 'img/food/christmas-dinner.png' %}" alt="Фото блюда">
+                    {% endif %}
+                    <div>
+                        <h2>{{dish.Title}}</h2>
+                        <p>{{dish.Description}}</p>
+                    </div>
+                </a>
+               {% endfor %}
+                
+            </section>
+        </main>
+    </body>
+{% endblock %}

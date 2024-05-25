@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <body>
+        <header>
+            <section class="header-menu">
+                <div class="menu-first">
+                    <a href="{%url 'plan_of_day' %}">План<img src="{% static 'img/icons/clipboard.png' %}" alt="План"></a>
+                    <a href="{%url 'dish_list' %}">Блюда<img src="{% static 'img/icons/dish.png' %}" alt="Блюда"></a>
+                </div>
+                <div class="menu-second">
+                    <a href="{%url 'profile' %}"><img src="{% static 'img/icons/user.png' %}" alt="Изображение профиля">Профиль</a>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="list-section">
+                <a href="">
+                    <img src="{% static 'img/food/christmas-dinner.png' %}" alt="Фото блюда">
+                    <div>
+                        <h2>─── ⋆⋅☆⋅⋆ {{dish_title}} ⋆⋅☆⋅⋆ ──</h2>
+                        <p><b>Описание:</b> {{dish_description}}</p>
+                        <p><b>Углеводы:</b> {{carbohydrates}}</p>
+                        <p><b>Белки:</b> {{protein}}</p>
+                        <p><b>Жиры:</b> {{fats}}</p>
+                        <p><b>Калории:</b> {{calories}}</p>
+                        <p><b>Витамин:</b> {{vitamin}}</p>
+                        <p><b>На 100 грамм. продукта!</b></p>
+                        <p><b>Рецепт</b> {{recipe}}</p>
+                    </div>
+                </a>
+            </section>
+        </main>
+    </body>
+{% endblock %}

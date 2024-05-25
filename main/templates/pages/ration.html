@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <body>
+        <header>
+            <section class="header-menu">
+                <div class="menu-first">
+                    <a href="{%url 'plan_of_day' %}">План<img src="{% static 'img/icons/clipboard.png' %}" alt="План"></a>
+                    <a href="{%url 'dish_list' %}">Блюда<img src="{% static 'img/icons/dish.png' %}" alt="Блюда"></a>
+                </div>
+                <div class="menu-second">
+                    <a href="{%url 'profile' %}"><img src="{% static 'img/icons/user.png' %}" alt="Изображение профиля">Профиль</a>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="ration-section">
+                <div class="food-box">
+                    <div>
+                        <img src="{% static 'img/ration/salat.jpg' %}" alt="">
+                        <p>Углеводы: {{ CarboHydrates1 }}</p>
+                        <p>Жиры: {{ Fats1 }}</p>
+                        <p>Белки: {{ Protein1 }}</p>
+                        <p>Калории: {{ Calories1 }}</p>
+                    </div>
+                    <div>
+                        <h2>{{ Title1 }}</h2>
+                        <h3>Описание:</h3>
+                        <p>Описание: {{ Description1 }}</p>
+                        <h3>Как приготовить:</h3>
+                        <p>Как приготовить: {{ Recipe1 }}</p>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="food-box">
+                    <div>
+                        <img src="{% static 'img/ration/salat.jpg' %}" alt="">
+                        <p>Углеводы: {{ CarboHydrates2 }}</p>
+                        <p>Жиры: {{ Fats2 }}</p>
+                        <p>Белки: {{ Protein2 }}</p>
+                        <p>Калории: {{ Calories2 }}</p>
+                    </div>
+                    <div>
+                        <h2>{{ Title2 }}</h2>
+                        <h3>Описание:</h3>
+                        <p>Описание: {{ Description2 }}</p>
+                        <h3>Как приготовить:</h3>
+                        <p>Как приготовить: {{ Recipe2 }}</p>
+                    </div>
+                </div>
+                <div class="line"></div>
+                <div class="food-box">
+                    <div>
+                        <img src="{% static 'img/ration/salat.jpg' %}" alt="">
+                        <p>Углеводы: {{ CarboHydrates3 }}</p>
+                        <p>Жиры: {{ Fats3 }}</p>
+                        <p>Белки: {{ Protein3 }}</p>
+                        <p>Калории: {{ Calories3 }}</p>
+                    </div>
+                    <div>
+                        <h2>{{ Title3 }}</h2>
+                        <h3>Описание:</h3>
+                        <p>Описание: {{ Description3 }}</p>
+                        <h3>Как приготовить:</h3>
+                        <p>Как приготовить: {{ Recipe3 }}</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+{% endblock %}

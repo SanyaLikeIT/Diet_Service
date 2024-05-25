@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <body>
+        <header>
+            <section class="header-menu">
+                <div class="menu-first">
+                    <a href="{%url 'plan_of_day' %}">План<img src="{% static 'img/icons/clipboard.png' %}" alt="План"></a>
+                    <a href="{%url 'dish_list' %}">Блюда<img src="{% static 'img/icons/dish.png' %}" alt="Блюда"></a>
+                </div>
+                <div class="menu-second">
+                    <a href=""><img src="{% static 'img/icons/user.png' %}" alt="Изображение профиля">Профиль</a>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="profile-section">
+                <section class="profile-box first-box">
+                    <div>
+                        <div><img src="{% static 'img/icons/user.png' %}" alt="Фото профиля"></div>
+                        <h2>{{ username }}</h2>
+                        <p>Возраст: {{ age }}</p>
+                        <p>Пол: {{ gender}}</p>
+                        <p>Рост: {{ height}}</p>
+                        <p>Вес: {{ weight }}</p>
+                        <p>Образ жизни: {{ style }}</p>
+                    </div>
+                    <div class="settings-btn"></div>
+                    <div class="settings-ul">
+                        <ul>
+                            <li class="change-profile-btn">Изменить данные</li>
+                            <hr color="#CACACA">
+                            <li class="change-profile-btn">Изменить пароль</li>
+                            <hr color="#CACACA">
+                            <li>Удалить аккаунт</li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="profile-box sinformation-box">
+                    <div>
+                        {% for allergy in allergies %}
+                        <p>{{allergy}}</p>
+                        {% endfor %}
+                        <div><div href="" class="btn-green">Изменить список</div></div>
+                    </div>
+                    <div class="open-btn"></div>
+                </section>
+
+                <section class="profile-box sinformation-box">
+                    <div>
+                        <h2>Необходимые витамины</h2>
+                        {% for vitamin in vitamins %}
+                        <p>{{vitamin}}</p>
+                        {% endfor %}
+                        <div><div href="" class="btn-green">Изменить список</div></div>
+                    </div>
+                    <div class="open-btn"></div>
+                </section>
+            </section>
+            <section class="">
+
+            </section>
+           <section class="change-form">
+                <form id='ChangeAllergy' method="POST">
+                    <h3 style="text-align: center;">Профиль</h3>
+                    <div class="items-form-box">
+                        {% csrf_token %}
+                        {{ change_allergy_form.as_p }}
+                    </div>
+                    <button class="save-btn" type="submit" name="ChangeAllergy">Сохранить</button>
+                    <div class="exit"></div>
+                </form>
+            </section>
+            <section class="change-form">
+                <form id='ChangeVitamins' method="POST">
+                    <h3 style="text-align: center;">Профиль</h3>
+                    <div class="items-form-box">
+                        {% csrf_token %}
+                        {{ change_vitamins_form.as_p }}
+                    </div>
+                    <button class="save-btn" type="submit" name="ChangeVitamins">Сохранить</button>
+                    <div class="exit"></div>
+                </form>
+            </section>
+            <section class="change-form profile-form">
+                <form id='ChangeProfile' method="POST">
+                    <h3 style="text-align: center;">Профиль</h3>
+                    <div class="items-form-box">
+                        {% csrf_token %}
+                        {{ change_profile_form.as_p }}
+                    </div>
+                    <button class="save-btn" type="submit" name="ChangeProfile">Сохранить</button>
+                    <div class="exit"></div>
+                </form>
+            </section>
+            <section class="change-form profile-form">
+                <form id='ChangePassword' method="POST">
+                    <h3 style="text-align: center;">Пароль</h3>
+                    <div class="items-form-box">
+                        {% csrf_token %}
+                        {{ change_password_form.as_p }}
+                    </div>
+                    <button class="save-btn" type="submit" name="ChangePassword">Сохранить</button>
+                    <div class="exit"></div>
+                </form>
+            </section>
+        </main>
+    </body>
+{% endblock %}
